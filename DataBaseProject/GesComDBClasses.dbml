@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GestComDB" Class="GesComDBClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SCAR-PC;Initial Catalog=GestComDB;Integrated Security=True" SettingsObjectName="DataBaseProject.Properties.Settings" SettingsPropertyName="GestComDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CLIENT" Member="CLIENTs">
+    <Type Name="CLIENT">
+      <Column Name="CLIENTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLIENTFIRSTNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTLASTNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTINSERTIONDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CLIENTADRESS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTRS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTRC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTNIS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTNIF" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTCOMPTBANC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTAI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLIENTLOGO" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CLIENT_WEB" Member="WEBs" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="WEB" />
+      <Association Name="CLIENT_COMMANDE" Member="COMMANDEs" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="COMMANDE" />
+      <Association Name="CLIENT_FACTURE" Member="FACTUREs" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="FACTURE" />
+      <Association Name="CLIENT_PROFORMA" Member="PROFORMAs" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="PROFORMA" />
+      <Association Name="CLIENT_TELEPHONE" Member="TELEPHONEs" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="TELEPHONE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WEB" Member="WEBs">
+    <Type Name="WEB">
+      <Column Name="WEBID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROVIDERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIENTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WEBADRESS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WEBTYPE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="CLIENT_WEB" Member="CLIENT" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="CLIENT" IsForeignKey="true" />
+      <Association Name="PROVIDER_WEB" Member="PROVIDER" ThisKey="PROVIDERID" OtherKey="PROVIDERID" Type="PROVIDER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COMMANDE" Member="COMMANDEs">
+    <Type Name="COMMANDE">
+      <Column Name="COMMANDEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLIENTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COMMANDEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COMMANDEMONTANT" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="COMMANDE_LINE" Member="LINEs" ThisKey="COMMANDEID" OtherKey="COMMANDEID" Type="LINE" />
+      <Association Name="CLIENT_COMMANDE" Member="CLIENT" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="CLIENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACTURE" Member="FACTUREs">
+    <Type Name="FACTURE">
+      <Column Name="FACTUREID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLIENTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FACTUREDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FACTUREMONTANT" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FACTUREMODEPAIEMENT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FACTUREETATPAIEMENT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FACTUREVALIDITE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FACTURE_LINE" Member="LINEs" ThisKey="FACTUREID" OtherKey="FACTUREID" Type="LINE" />
+      <Association Name="CLIENT_FACTURE" Member="CLIENT" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="CLIENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FOURNITURE" Member="FOURNITUREs">
+    <Type Name="FOURNITURE">
+      <Column Name="FOURNITUREID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROVIDERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FOURNITUREDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FOURNITUREMONTANT" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="FOURNITUREMODEPAIEMENT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FOURNITUREETATPAIEMENT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FOURNITUREVALIDITE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FOURNITURE_LINE" Member="LINEs" ThisKey="FOURNITUREID" OtherKey="FOURNITUREID" Type="LINE" />
+      <Association Name="PROVIDER_FOURNITURE" Member="PROVIDER" ThisKey="PROVIDERID" OtherKey="PROVIDERID" Type="PROVIDER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LINE" Member="LINEs">
+    <Type Name="LINE">
+      <Column Name="LINEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FOURNITUREID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COMMANDEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FACTUREPROID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FACTUREID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRIXLINEU" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="QTELINE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REMISE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="FOURNITURE_LINE" Member="FOURNITURE" ThisKey="FOURNITUREID" OtherKey="FOURNITUREID" Type="FOURNITURE" IsForeignKey="true" />
+      <Association Name="COMMANDE_LINE" Member="COMMANDE" ThisKey="COMMANDEID" OtherKey="COMMANDEID" Type="COMMANDE" IsForeignKey="true" />
+      <Association Name="FACTURE_LINE" Member="FACTURE" ThisKey="FACTUREID" OtherKey="FACTUREID" Type="FACTURE" IsForeignKey="true" />
+      <Association Name="PRODUCT_LINE" Member="PRODUCT" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="PRODUCT" IsForeignKey="true" />
+      <Association Name="PROFORMA_LINE" Member="PROFORMA" ThisKey="FACTUREPROID" OtherKey="FACTUREPROID" Type="PROFORMA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MESURE" Member="MESUREs">
+    <Type Name="MESURE">
+      <Column Name="PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PROMEASUREID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PRODUCT_MESURE" Member="PRODUCT" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="PRODUCT" IsForeignKey="true" />
+      <Association Name="PRODUCTMEASURE_MESURE" Member="PRODUCTMEASURE" ThisKey="PROMEASUREID" OtherKey="PROMEASUREID" Type="PRODUCTMEASURE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT" Member="PRODUCTs">
+    <Type Name="PRODUCT">
+      <Column Name="PRODUCTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRODUCTCATEGORIEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PRODUCTREFERENCEEXTERNE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PRODUCTREFERENCEINTERNE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PRODUCTMINQTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRODUCTMAXQTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRODUCTINSERTIONDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PRODUCTREMARKS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TAUXTVA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRIXVENTE" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="PRODUCT_LINE" Member="LINEs" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="LINE" />
+      <Association Name="PRODUCT_MESURE" Member="MESUREs" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="MESURE" />
+      <Association Name="PRODUCT_STATE" Member="STATEs" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="STATE" />
+      <Association Name="PRODUCT_STOCKER" Member="STOCKERs" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="STOCKER" />
+      <Association Name="PRODUCTCATEGORIE_PRODUCT" Member="PRODUCTCATEGORIE" ThisKey="PRODUCTCATEGORIEID" OtherKey="PRODUCTCATEGORIEID" Type="PRODUCTCATEGORIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTCATEGORIE" Member="PRODUCTCATEGORIEs">
+    <Type Name="PRODUCTCATEGORIE">
+      <Column Name="PRODUCTCATEGORIEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRO_PRODUCTCATEGORIEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CATEGORIENAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="PRODUCTCATEGORIE_PRODUCT" Member="PRODUCTs" ThisKey="PRODUCTCATEGORIEID" OtherKey="PRODUCTCATEGORIEID" Type="PRODUCT" />
+      <Association Name="PRODUCTCATEGORIE_PRODUCTCATEGORIE" Member="PRODUCTCATEGORIEs" ThisKey="PRODUCTCATEGORIEID" OtherKey="PRO_PRODUCTCATEGORIEID" Type="PRODUCTCATEGORIE" />
+      <Association Name="PRODUCTCATEGORIE_PRODUCTCATEGORIE" Member="PRODUCTCATEGORIE1" ThisKey="PRO_PRODUCTCATEGORIEID" OtherKey="PRODUCTCATEGORIEID" Type="PRODUCTCATEGORIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTMEASURE" Member="PRODUCTMEASUREs">
+    <Type Name="PRODUCTMEASURE">
+      <Column Name="PROMEASUREID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROMEASURETYPE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROMEASUREVALUE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PROMEASUREUNIT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="PRODUCTMEASURE_MESURE" Member="MESUREs" ThisKey="PROMEASUREID" OtherKey="PROMEASUREID" Type="MESURE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTSTATE" Member="PRODUCTSTATEs">
+    <Type Name="PRODUCTSTATE">
+      <Column Name="PROSTATEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROSTATENAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="PRODUCTSTATE_STATE" Member="STATEs" ThisKey="PROSTATEID" OtherKey="PROSTATEID" Type="STATE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROFORMA" Member="PROFORMAs">
+    <Type Name="PROFORMA">
+      <Column Name="FACTUREPROID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CLIENTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FACTUREPRODATA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FACTUREPROMONTANT" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="PROFORMA_LINE" Member="LINEs" ThisKey="FACTUREPROID" OtherKey="FACTUREPROID" Type="LINE" />
+      <Association Name="CLIENT_PROFORMA" Member="CLIENT" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="CLIENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROVIDER" Member="PROVIDERs">
+    <Type Name="PROVIDER">
+      <Column Name="PROVIDERID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROVIDERFIRSTNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERLASTNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERINSERTIONDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PROVIDERADRESS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERRS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIEDERPC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIEDERNIS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERNIF" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERCOMPTBANC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERAI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PROVIDERLOGO" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="PROVIDER_WEB" Member="WEBs" ThisKey="PROVIDERID" OtherKey="PROVIDERID" Type="WEB" />
+      <Association Name="PROVIDER_FOURNITURE" Member="FOURNITUREs" ThisKey="PROVIDERID" OtherKey="PROVIDERID" Type="FOURNITURE" />
+      <Association Name="PROVIDER_TELEPHONE" Member="TELEPHONEs" ThisKey="PROVIDERID" OtherKey="PROVIDERID" Type="TELEPHONE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STATE" Member="STATEs">
+    <Type Name="STATE">
+      <Column Name="PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PROSTATEID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PRODUCT_STATE" Member="PRODUCT" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="PRODUCT" IsForeignKey="true" />
+      <Association Name="PRODUCTSTATE_STATE" Member="PRODUCTSTATE" ThisKey="PROSTATEID" OtherKey="PROSTATEID" Type="PRODUCTSTATE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STOCK" Member="STOCKs">
+    <Type Name="STOCK">
+      <Column Name="STOCKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STOCKNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="STOCKADRESS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="STOCK_STOCKER" Member="STOCKERs" ThisKey="STOCKID" OtherKey="STOCKID" Type="STOCKER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STOCKER" Member="STOCKERs">
+    <Type Name="STOCKER">
+      <Column Name="PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STOCKID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PRODUCT_STOCKER" Member="PRODUCT" ThisKey="PRODUCTID" OtherKey="PRODUCTID" Type="PRODUCT" IsForeignKey="true" />
+      <Association Name="STOCK_STOCKER" Member="STOCK" ThisKey="STOCKID" OtherKey="STOCKID" Type="STOCK" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TELEPHONE" Member="TELEPHONEs">
+    <Type Name="TELEPHONE">
+      <Column Name="TELEPHONEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROVIDERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLIENTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TELEPHONENUMBER" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TELEPHONETYPE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="CLIENT_TELEPHONE" Member="CLIENT" ThisKey="CLIENTID" OtherKey="CLIENTID" Type="CLIENT" IsForeignKey="true" />
+      <Association Name="PROVIDER_TELEPHONE" Member="PROVIDER" ThisKey="PROVIDERID" OtherKey="PROVIDERID" Type="PROVIDER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

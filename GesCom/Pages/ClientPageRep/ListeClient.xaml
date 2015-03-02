@@ -1,0 +1,57 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:GestComDBDataSetTableAdapters="clr-namespace:DataBaseProject.GestComDBDataSetTableAdapters;assembly=DataBaseProject" xmlns:DataBaseProject="clr-namespace:DataBaseProject;assembly=DataBaseProject" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="GesCom.Pages.ClientPageRep.ListeClient"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="900">
+    <UserControl.Resources>
+        <dx:TypedCollectionViewSource x:Key="TypedCollectionViewSource" AdapterType="{x:Type GestComDBDataSetTableAdapters:CLIENTTableAdapter}" ContextType="{x:Type DataBaseProject:GestComDBDataSet}" CollectionViewType="{x:Type BindingListCollectionView}" Path="CLIENT">
+            <dx:DesignDataManager.DesignData>
+                <dx:DesignDataSettings RowCount="5"/>
+            </dx:DesignDataManager.DesignData>
+        </dx:TypedCollectionViewSource>
+        <CollectionViewSource x:Key="cLIENTViewSource" d:DesignSource="{d:DesignInstance {x:Type DataBaseProject:CLIENT}, CreateList=True}"/>
+    </UserControl.Resources>
+    <Grid Style="{StaticResource ContentRoot}" DataContext="{StaticResource cLIENTViewSource}">
+        <ScrollViewer>
+            <DataGrid x:Name="cLIENTDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" Height="200" ItemsSource="{Binding}" RowDetailsVisibilityMode="VisibleWhenSelected" Width="832">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="cLIENTADRESSColumn" Binding="{Binding CLIENTADRESS}" Header="CLIENTADRESS" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="cLIENTAIColumn" Binding="{Binding CLIENTAI}" Header="CLIENTAI" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="cLIENTCOMPTBANCColumn" Binding="{Binding CLIENTCOMPTBANC}" Header="CLIENTCOMPTBANC" Width="SizeToHeader"/>
+                    <DataGridTemplateColumn x:Name="cLIENTDATECREATIONColumn" Header="CLIENTDATECREATION" Width="SizeToHeader">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding CLIENTDATECREATION, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn x:Name="cLIENTFIRSTNAMEColumn" Binding="{Binding CLIENTFIRSTNAME}" Header="CLIENTFIRSTNAME" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="cLIENTIDColumn" Binding="{Binding CLIENTID}" Header="CLIENTID" Width="SizeToHeader"/>
+                    <DataGridTemplateColumn x:Name="cLIENTINSERTIONDATEColumn" Header="CLIENTINSERTIONDATE" Width="SizeToHeader">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding CLIENTINSERTIONDATE, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn x:Name="cLIENTLASTNAMEColumn" Binding="{Binding CLIENTLASTNAME}" Header="CLIENTLASTNAME" Width="SizeToHeader"/>
+                    <DataGridTemplateColumn x:Name="cLIENTLOGOColumn" Header="CLIENTLOGO" Width="SizeToHeader">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <dxe:ImageEdit EditValue="{Binding CLIENTLOGO}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn x:Name="cLIENTNIFColumn" Binding="{Binding CLIENTNIF}" Header="CLIENTNIF" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="cLIENTNISColumn" Binding="{Binding CLIENTNIS}" Header="CLIENTNIS" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="cLIENTRCColumn" Binding="{Binding CLIENTRC}" Header="CLIENTRC" Width="SizeToHeader"/>
+                    <DataGridTextColumn x:Name="cLIENTRSColumn" Binding="{Binding CLIENTRS}" Header="CLIENTRS" Width="SizeToHeader"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

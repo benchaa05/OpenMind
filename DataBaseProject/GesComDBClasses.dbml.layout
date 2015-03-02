@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 25.375" name="GesComDBClasses">
+  <DataContextMoniker Name="/GesComDBClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d5d80a25-509e-49cd-8857-023ae52c2702" absoluteBounds="1, 11.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/CLIENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="828591f4-1640-45d2-9cf0-eb2c71f736df" absoluteBounds="1.0150000000000001, 12.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8296373-7ec1-4454-a0ec-fbf56884bde4" absoluteBounds="6.75, 14.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/WEB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb8c304c-be2a-4bf0-af05-c4542a57c486" absoluteBounds="6.765, 15.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6657041-aaed-460f-8e93-a9ad8ac77816" absoluteBounds="3.75, 12.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/COMMANDE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81626ce3-55ee-4e47-933e-08bfd3249a00" absoluteBounds="3.765, 13.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99de9691-4509-4f42-949a-161b281549fd" absoluteBounds="3.75, 20, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/FACTURE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d2e8010-1b9e-461d-a63e-d80d22ccaa39" absoluteBounds="3.765, 20.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f69654c-063d-470d-a5b3-a86bfd44b085" absoluteBounds="3.75, 16.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/FOURNITURE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0f5eb96-a83b-4160-b997-09363244a6d7" absoluteBounds="3.765, 17.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ac94824-aa71-452a-a683-39b111ffc49d" absoluteBounds="6.5, 5.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/LINE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2cefde1-8b42-4850-ad85-e87b21581979" absoluteBounds="6.515, 5.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d290adf-bab0-488a-9140-d03339382623" absoluteBounds="3.5, 5.875, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/MESURE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ddf1aa7-b210-4d03-82b7-08d5f6727f12" absoluteBounds="3.515, 6.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="687bdc46-2886-4a35-8952-ff03cec72d4e" absoluteBounds="0.75, 5, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/PRODUCT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bafbd7b9-7b38-4763-9c92-f930abea257c" absoluteBounds="0.765, 5.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b4d9577-ab86-493a-875e-807e3c3bb4da" absoluteBounds="1.5, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/PRODUCTCATEGORIE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dc51642-47bf-404c-9434-3f5fd59e4497" absoluteBounds="1.5150000000000001, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60b012fb-c15a-404f-9b83-76b6d9e5f2eb" absoluteBounds="0.75, 20.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/PRODUCTMEASURE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cdeda5c-9eeb-4f15-a87f-418b847f8026" absoluteBounds="0.765, 21.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df0dff0a-1065-4a79-8e36-effb7e2a77d8" absoluteBounds="0.75, 8.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/PRODUCTSTATE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66d4f1c7-f38c-40b7-b445-b2e5df6a38c7" absoluteBounds="0.765, 9.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5321a24-cf0c-4120-a116-dea1d79961f4" absoluteBounds="3.75, 9.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/PROFORMA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80ccb8fc-dc87-4427-bfec-0d17e1e6e628" absoluteBounds="3.765, 10.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fda435b9-2772-4e5d-bf4f-9484948f95f7" absoluteBounds="1, 16.125, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/PROVIDER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ed8f5af-d765-4da6-acc0-647f497b6cf8" absoluteBounds="1.0150000000000001, 16.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f42dcb70-6471-44de-9193-7e4c37e2aedf" absoluteBounds="3.5, 3.875, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/STATE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7618c0d7-d935-4a9c-99c5-6fe8dd122fd9" absoluteBounds="3.515, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6abf9c4b-446d-4e96-b0f6-43f72511d861" absoluteBounds="0.75, 23.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/STOCK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="872797a7-08a7-4a97-9b6a-f544bd88a008" absoluteBounds="0.765, 24.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="131e57ec-f80b-4891-a7ab-0947ea4a7a3b" absoluteBounds="3.5, 7.875, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/STOCKER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79ebc200-5fe8-4b7d-a093-52572f58a43e" absoluteBounds="3.515, 8.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="660f10de-108f-42a2-9e82-db23165820ce" absoluteBounds="6.75, 17.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/GesComDBClassesDataContext/TELEPHONE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7eb50ec-cecd-4e24-ba80-88ba5c9d77a5" absoluteBounds="6.765, 18.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 12.15625); (3.16666666666667 : 12.15625 : JumpStart); (3.33333333333333 : 12.15625 : JumpEnd); (3.51041666666667 : 12.15625 : JumpStart); (3.67708333333333 : 12.15625 : JumpEnd); (6.47916416666667 : 12.15625 : JumpStart); (6.67708333333333 : 12.15625 : JumpEnd); (7.49479416666667 : 12.15625 : JumpStart); (7.66146083333333 : 12.15625 : JumpEnd); (8.16406375 : 12.15625); (8.16406375 : 14.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/CLIENT/CLIENT_WEB" />
+      <nodes>
+        <classShapeMoniker Id="d5d80a25-509e-49cd-8857-023ae52c2702" />
+        <classShapeMoniker Id="a8296373-7ec1-4454-a0ec-fbf56884bde4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 13.4142976888021); (3.16666666666667 : 13.4142976888021 : JumpStart); (3.33333333333333 : 13.4142976888021 : JumpEnd); (3.51041666666667 : 13.4142976888021 : JumpStart); (3.67708333333333 : 13.4142976888021 : JumpEnd); (3.75 : 13.4142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/CLIENT/CLIENT_COMMANDE" />
+      <nodes>
+        <classShapeMoniker Id="d5d80a25-509e-49cd-8857-023ae52c2702" />
+        <classShapeMoniker Id="e6657041-aaed-460f-8e93-a9ad8ac77816" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.96769230769231 : 14.8670068359375); (3.19107443490112 : 15.0903889631463 : JumpStart); (3.30892556509888 : 15.2082400933441 : JumpEnd); (3.375 : 15.2743145282452); (3.375 : 21.0777498372396); (3.51041666666667 : 21.0777498372396 : JumpStart); (3.67708333333333 : 21.0777498372396 : JumpEnd); (3.75 : 21.0777498372396)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/CLIENT/CLIENT_FACTURE" />
+      <nodes>
+        <classShapeMoniker Id="d5d80a25-509e-49cd-8857-023ae52c2702" />
+        <classShapeMoniker Id="99de9691-4509-4f42-949a-161b281549fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 17.09375); (6.29166666666667 : 17.09375 : JumpStart); (6.45833333333333 : 17.09375 : JumpEnd); (6.59375 : 17.09375); (6.59375 : 7.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/FOURNITURE/FOURNITURE_LINE" />
+      <nodes>
+        <classShapeMoniker Id="0f69654c-063d-470d-a5b3-a86bfd44b085" />
+        <classShapeMoniker Id="4ac94824-aa71-452a-a683-39b111ffc49d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 13.4142976888021); (6.47916416666667 : 13.4142976888021 : JumpStart); (6.67708333333333 : 13.4142976888021 : JumpEnd); (7.5781275 : 13.4142976888021); (7.5781275 : 7.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/COMMANDE/COMMANDE_LINE" />
+      <nodes>
+        <classShapeMoniker Id="e6657041-aaed-460f-8e93-a9ad8ac77816" />
+        <classShapeMoniker Id="4ac94824-aa71-452a-a683-39b111ffc49d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 21.0777498372396); (6.5624975 : 21.0777498372396); (6.5624975 : 7.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/FACTURE/FACTURE_LINE" />
+      <nodes>
+        <classShapeMoniker Id="99de9691-4509-4f42-949a-161b281549fd" />
+        <classShapeMoniker Id="4ac94824-aa71-452a-a683-39b111ffc49d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.46875); (6.5 : 5.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCT/PRODUCT_LINE" />
+      <nodes>
+        <classShapeMoniker Id="687bdc46-2886-4a35-8952-ff03cec72d4e" />
+        <classShapeMoniker Id="4ac94824-aa71-452a-a683-39b111ffc49d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.47199625651042); (3.04166666666667 : 6.47199625651042 : JumpStart); (3.20833333333333 : 6.47199625651042 : JumpEnd); (3.5 : 6.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCT/PRODUCT_MESURE" />
+      <nodes>
+        <classShapeMoniker Id="687bdc46-2886-4a35-8952-ff03cec72d4e" />
+        <classShapeMoniker Id="8d290adf-bab0-488a-9140-d03339382623" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 2.1362939453125); (2.125 : 5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCTCATEGORIE/PRODUCTCATEGORIE_PRODUCT" />
+      <nodes>
+        <classShapeMoniker Id="3b4d9577-ab86-493a-875e-807e3c3bb4da" />
+        <classShapeMoniker Id="687bdc46-2886-4a35-8952-ff03cec72d4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.19931705603966 : 0.75); (2.19931705603966 : 0.5); (2.81500117938702 : 0.5); (2.81500117938702 : 0.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCTCATEGORIE/PRODUCTCATEGORIE_PRODUCTCATEGORIE" />
+      <nodes>
+        <classShapeMoniker Id="3b4d9577-ab86-493a-875e-807e3c3bb4da" />
+        <classShapeMoniker Id="3b4d9577-ab86-493a-875e-807e3c3bb4da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 20.625); (1.75 : 19.4920068359375); (3.25 : 19.4920068359375); (3.25 : 6.47199625651042); (3.5 : 6.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCTMEASURE/PRODUCTMEASURE_MESURE" />
+      <nodes>
+        <classShapeMoniker Id="60b012fb-c15a-404f-9b83-76b6d9e5f2eb" />
+        <classShapeMoniker Id="8d290adf-bab0-488a-9140-d03339382623" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 9.875); (5.65625 : 7.39829752604167); (6.5 : 7.39829752604167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PROFORMA/PROFORMA_LINE" />
+      <nodes>
+        <classShapeMoniker Id="c5321a24-cf0c-4120-a116-dea1d79961f4" />
+        <classShapeMoniker Id="4ac94824-aa71-452a-a683-39b111ffc49d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.90625 : 11.75); (2.90625 : 10.7925439453125); (3.16666666666667 : 10.7925439453125 : JumpStart); (3.33333333333333 : 10.7925439453125 : JumpEnd); (3.51041666666667 : 10.7925439453125 : JumpStart); (3.67708333333333 : 10.7925439453125 : JumpEnd); (3.75 : 10.7925439453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/CLIENT/CLIENT_PROFORMA" />
+      <nodes>
+        <classShapeMoniker Id="d5d80a25-509e-49cd-8857-023ae52c2702" />
+        <classShapeMoniker Id="c5321a24-cf0c-4120-a116-dea1d79961f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2 : 16.125); (2 : 15.5104484049479); (3.16666666666667 : 15.5104484049479 : JumpStart); (3.45833333333333 : 15.5104484049479 : JumpEnd); (3.51041666666667 : 15.5104484049479 : JumpStart); (3.67708333333333 : 15.5104484049479 : JumpEnd); (6.29166666666667 : 15.5104484049479 : JumpStart); (6.45833333333333 : 15.5104484049479 : JumpEnd); (6.47916416666667 : 15.5104484049479 : JumpStart); (6.67708333333333 : 15.5104484049479 : JumpEnd); (6.75 : 15.5104484049479)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PROVIDER/PROVIDER_WEB" />
+      <nodes>
+        <classShapeMoniker Id="fda435b9-2772-4e5d-bf4f-9484948f95f7" />
+        <classShapeMoniker Id="a8296373-7ec1-4454-a0ec-fbf56884bde4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 17.7027498372396); (3.16666666666667 : 17.7027498372396 : JumpStart); (3.45833333333333 : 17.7027498372396 : JumpEnd); (3.51041666666667 : 17.7027498372396 : JumpStart); (3.67708333333333 : 17.7027498372396 : JumpEnd); (3.75 : 17.7027498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PROVIDER/PROVIDER_FOURNITURE" />
+      <nodes>
+        <classShapeMoniker Id="fda435b9-2772-4e5d-bf4f-9484948f95f7" />
+        <classShapeMoniker Id="0f69654c-063d-470d-a5b3-a86bfd44b085" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.4062475 : 5); (1.4062475 : 4.4062475); (2.04166666666667 : 4.4062475 : JumpStart); (2.20833333333333 : 4.4062475 : JumpEnd); (3.5 : 4.4062475)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCT/PRODUCT_STATE" />
+      <nodes>
+        <classShapeMoniker Id="687bdc46-2886-4a35-8952-ff03cec72d4e" />
+        <classShapeMoniker Id="f42dcb70-6471-44de-9193-7e4c37e2aedf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.875); (3.125 : 8.5); (3.125 : 5.44490996880008); (3.50091745577925 : 5.06899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCTSTATE/PRODUCTSTATE_STATE" />
+      <nodes>
+        <classShapeMoniker Id="df0dff0a-1065-4a79-8e36-effb7e2a77d8" />
+        <classShapeMoniker Id="f42dcb70-6471-44de-9193-7e4c37e2aedf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.86316594210737); (2.9375 : 8.05066594210737); (2.9375 : 7.3125); (3.06607443490112 : 7.44107443490112 : JumpStart); (3.18392556509888 : 7.55892556509888 : JumpEnd); (3.19107443490112 : 7.56607443490112 : JumpStart); (3.30892556509888 : 7.68392556509888 : JumpEnd); (3.5 : 7.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PRODUCT/PRODUCT_STOCKER" />
+      <nodes>
+        <classShapeMoniker Id="687bdc46-2886-4a35-8952-ff03cec72d4e" />
+        <classShapeMoniker Id="131e57ec-f80b-4891-a7ab-0947ea4a7a3b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 24.4431469726563); (3.59375 : 24.4431469726563); (3.59375 : 9.06899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/STOCK/STOCK_STOCKER" />
+      <nodes>
+        <classShapeMoniker Id="6abf9c4b-446d-4e96-b0f6-43f72511d861" />
+        <classShapeMoniker Id="131e57ec-f80b-4891-a7ab-0947ea4a7a3b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 14.8331596820913); (3.19107443490112 : 15.0242341169925 : JumpStart); (3.30892556509888 : 15.1420852471902 : JumpEnd); (3.40884715384615 : 15.2420068359375); (3.51041666666667 : 15.2420068359375 : JumpStart); (3.67708333333333 : 15.2420068359375 : JumpEnd); (6.375 : 15.2420068359375); (6.375 : 17.2486387716847); (6.50357193490112 : 17.3772107065858 : JumpStart); (6.62142306509888 : 17.4950618367836 : JumpEnd); (6.7513612283153 : 17.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/CLIENT/CLIENT_TELEPHONE" />
+      <nodes>
+        <classShapeMoniker Id="d5d80a25-509e-49cd-8857-023ae52c2702" />
+        <classShapeMoniker Id="660f10de-108f-42a2-9e82-db23165820ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 19.0425032552083); (3.16666666666667 : 19.0425032552083 : JumpStart); (3.45833333333333 : 19.0425032552083 : JumpEnd); (3.51041666666667 : 19.0425032552083 : JumpStart); (3.67708333333333 : 19.0425032552083 : JumpEnd); (6.47916416666667 : 19.0425032552083 : JumpStart); (6.64583083333333 : 19.0425032552083 : JumpEnd); (6.75 : 19.0425032552083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GesComDBClassesDataContext/PROVIDER/PROVIDER_TELEPHONE" />
+      <nodes>
+        <classShapeMoniker Id="fda435b9-2772-4e5d-bf4f-9484948f95f7" />
+        <classShapeMoniker Id="660f10de-108f-42a2-9e82-db23165820ce" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

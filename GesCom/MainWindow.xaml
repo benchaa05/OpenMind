@@ -1,0 +1,33 @@
+﻿<mui:ModernWindow x:Class="GesCom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Gestion Commerciale" IsTitleVisible="False"          
+        ContentSource="/Pages/Home.xaml" WindowStartupLocation="CenterScreen" Width="1000" Height="700" MinWidth="1000" MinHeight="700">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Gestion Commerciale">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Accueil" Source="/Pages/Home.xaml" />
+                <mui:Link DisplayName="Client" Source="/Pages/ClientPage.xaml" />
+                <mui:Link DisplayName="Fournisseur" Source="/Pages/FournisseurPage.xaml" />
+                <mui:Link DisplayName="Produit" Source="/Pages/ProductPage.xaml" />
+                <mui:Link DisplayName="Achats" Source="/Pages/achatPage.xaml" />
+                <mui:Link DisplayName="Vente" Source="/Pages/ventePage.xaml" />
+                <mui:Link DisplayName="Stocks" Source="/Pages/stockPage.xaml" />
+                <mui:Link DisplayName="Réglements" Source="/Pages/reglementPage.xaml" />
+                <mui:Link DisplayName="Statistiques" Source="/Pages/statistiquePage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Parametres" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Application" Source="/Pages/SettingsPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="Parametres" Source="/Pages/SettingsPage.xaml" />
+        <mui:Link DisplayName="Contact" Source="http://www.ITCastle.org" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>
